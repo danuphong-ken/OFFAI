@@ -59,13 +59,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         lucide.createIcons();
                     }, 300);
                 } else {
-                    throw new Error('Signup failed');
+                    const errBody = await res.json().catch(() => ({}));
+                    console.error('MailerLite error:', res.status, errBody);
+                    throw new Error('HTTP ' + res.status + ': ' + (errBody.message || 'Signup failed'));
                 }
             } catch (err) {
                 console.error(err);
                 btn.disabled = false;
                 btn.querySelector('.btn-label').textContent = 'เข้าร่วมเลย';
-                alert('เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้งครับ');
+                alert('เกิดข้อผิดพลาด: ' + err.message);
             }
         });
     }
