@@ -158,44 +158,118 @@
 
         <!-- ── WAITLIST ── -->
         <section class="waitlist-section" id="waitlist">
-            <div class="waitlist-badge">🚀 Early Access</div>
-            <h2 class="waitlist-title">Join the Waitlist</h2>
-            <p class="waitlist-subtitle">
-                เป็นคนแรกที่ได้ทดลองใช้ เมื่อเปิดตัว<br>
-                Founding members ได้ราคาพิเศษ <strong>50% off ตลอดชีพ</strong>
-            </p>
 
-            <form class="waitlist-form" id="waitlistForm">
-                <div class="waitlist-input-group">
-                    <input
-                        type="email"
-                        name="email"
-                        class="waitlist-input"
-                        placeholder="your@email.com"
-                        required
-                        autocomplete="email"
-                    />
-                    <button type="submit" class="waitlist-btn" id="waitlistBtn">
-                        <span class="btn-label">เข้าร่วมเลย</span>
+            <!-- STEP 1: Email -->
+            <div id="step1">
+                <div class="waitlist-badge">🚀 Early Access</div>
+                <h2 class="waitlist-title">Join the Waitlist</h2>
+                <p class="waitlist-subtitle">
+                    เป็นคนแรกที่ได้ทดลองใช้ เมื่อเปิดตัว<br>
+                    Founding members ได้ราคาพิเศษ <strong>50% off ตลอดชีพ</strong>
+                </p>
+
+                <form class="waitlist-form" id="waitlistForm">
+                    <div class="waitlist-input-group">
+                        <input
+                            type="email"
+                            name="email"
+                            class="waitlist-input"
+                            placeholder="your@email.com"
+                            required
+                            autocomplete="email"
+                        />
+                        <button type="submit" class="waitlist-btn" id="waitlistBtn">
+                            <span class="btn-label">เข้าร่วมเลย</span>
+                            <i data-lucide="arrow-right" size="16"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="waitlist-proof">
+                    <div class="proof-avatars">
+                        <div class="proof-avatar" style="background:#f59e0b;">J</div>
+                        <div class="proof-avatar" style="background:#10b981;">M</div>
+                        <div class="proof-avatar" style="background:#8b5cf6;">S</div>
+                        <div class="proof-avatar" style="background:#ef4444;">A</div>
+                    </div>
+                    <span class="proof-text">Join <strong id="waitlistCount">47</strong> คนที่รออยู่แล้ว</span>
+                </div>
+            </div>
+
+            <!-- STEP 2: Interview Questions -->
+            <div id="step2" style="display:none;">
+                <div class="waitlist-badge">✅ อยู่ในลิสต์แล้ว!</div>
+                <h2 class="waitlist-title">ช่วยตอบ 5 คำถามได้ไหมครับ?</h2>
+                <p class="waitlist-subtitle">
+                    ใช้เวลาแค่ 2 นาที คำตอบของคุณจะช่วยให้ OFFAI<br>
+                    ตรงกับงานจริงๆ ของคุณมากขึ้นครับ
+                </p>
+
+                <form class="interview-form" id="interviewForm">
+
+                    <div class="iq-group">
+                        <label class="iq-label">1. คุณทำงานตำแหน่งอะไร?</label>
+                        <input type="text" class="iq-input" id="iq_job" placeholder="เช่น HR Manager, Admin, Marketing" />
+                    </div>
+
+                    <div class="iq-group">
+                        <label class="iq-label">2. งานที่เสียเวลามากที่สุดทุกวันคืออะไร?</label>
+                        <textarea class="iq-textarea" id="iq_pain" rows="2" placeholder="เล่าให้ฟังได้เลยครับ..."></textarea>
+                    </div>
+
+                    <div class="iq-group">
+                        <label class="iq-label">3. ถ้า OFFAI ช่วยได้ อยากให้ทำอะไรมากที่สุด?</label>
+                        <textarea class="iq-textarea" id="iq_want" rows="2" placeholder="เช่น เขียน Email, สรุปประชุม, แนะนำ Tools..."></textarea>
+                    </div>
+
+                    <div class="iq-group">
+                        <label class="iq-label">4. เคยลอง AI Tools ในงานบ้างไหม?</label>
+                        <div class="iq-options" id="iq_ai">
+                            <button type="button" class="iq-opt" data-val="ใช้ทุกวัน">ใช้ทุกวัน</button>
+                            <button type="button" class="iq-opt" data-val="ลองบ้าง">ลองบ้าง</button>
+                            <button type="button" class="iq-opt" data-val="ยังไม่เคย">ยังไม่เคย</button>
+                        </div>
+                    </div>
+
+                    <div class="iq-group">
+                        <label class="iq-label">5. ราคาที่รู้สึกคุ้มมากต่อเดือน?</label>
+                        <div class="iq-options" id="iq_price">
+                            <button type="button" class="iq-opt" data-val="ไม่เกิน 99 บาท">ไม่เกิน ฿99</button>
+                            <button type="button" class="iq-opt" data-val="100-299 บาท">฿100-299</button>
+                            <button type="button" class="iq-opt" data-val="300-599 บาท">฿300-599</button>
+                            <button type="button" class="iq-opt" data-val="600+ บาท">฿600+</button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="waitlist-btn interview-submit-btn" id="interviewBtn">
+                        <span class="btn-label">ส่งคำตอบ</span>
                         <i data-lucide="arrow-right" size="16"></i>
                     </button>
-                </div>
-            </form>
 
-            <div class="waitlist-success" id="waitlistSuccess">
-                <i data-lucide="check-circle" size="20"></i>
-                <span>อยู่ในลิสต์แล้ว! เราจะแจ้งคุณทันทีที่เปิดตัว 🎉</span>
+                    <button type="button" class="iq-skip" id="skipBtn">ข้ามไปก่อน</button>
+
+                </form>
             </div>
 
-            <div class="waitlist-proof">
-                <div class="proof-avatars">
-                    <div class="proof-avatar" style="background:#f59e0b;">J</div>
-                    <div class="proof-avatar" style="background:#10b981;">M</div>
-                    <div class="proof-avatar" style="background:#8b5cf6;">S</div>
-                    <div class="proof-avatar" style="background:#ef4444;">A</div>
+            <!-- STEP 3: Thank you -->
+            <div id="step3" style="display:none;">
+                <div class="waitlist-badge">🎉 ขอบคุณมาก!</div>
+                <h2 class="waitlist-title">อยู่ในลิสต์แล้วครับ</h2>
+                <p class="waitlist-subtitle">
+                    เราจะแจ้งคุณทันทีที่ OFFAI พร้อมให้ทดลองใช้<br>
+                    และคุณจะได้ราคา <strong>Founding Member พิเศษ 50% off</strong> ตลอดชีพครับ
+                </p>
+                <div class="waitlist-proof" style="justify-content:center; margin-top:1.5rem;">
+                    <div class="proof-avatars">
+                        <div class="proof-avatar" style="background:#f59e0b;">J</div>
+                        <div class="proof-avatar" style="background:#10b981;">M</div>
+                        <div class="proof-avatar" style="background:#8b5cf6;">S</div>
+                        <div class="proof-avatar" style="background:#ef4444;">A</div>
+                    </div>
+                    <span class="proof-text">Join <strong id="waitlistCount2">47</strong> คนที่รออยู่แล้ว</span>
                 </div>
-                <span class="proof-text">Join <strong id="waitlistCount">47</strong> คนที่รออยู่แล้ว</span>
             </div>
+
         </section>
 
         <!-- ── FOOTER ── -->

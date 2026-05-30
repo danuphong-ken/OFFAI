@@ -581,6 +581,108 @@ section {
 .proof-text strong { color: white; }
 
 /* ══════════════════════════════
+   INTERVIEW QUESTIONS (Step 2)
+══════════════════════════════ */
+.interview-form {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.iq-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.iq-label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+}
+
+.iq-input, .iq-textarea {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    color: white;
+    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    resize: none;
+    transition: var(--transition);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.iq-input::placeholder, .iq-textarea::placeholder {
+    color: rgba(255,255,255,0.4);
+}
+
+.iq-input:focus, .iq-textarea:focus {
+    border-color: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.15);
+}
+
+.iq-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.iq-opt {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    color: rgba(255,255,255,0.75);
+    padding: 0.45rem 1rem;
+    font-size: 0.83rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.iq-opt:hover {
+    background: rgba(255,255,255,0.18);
+    color: white;
+}
+
+.iq-opt.selected {
+    background: white;
+    border-color: white;
+    color: #4338ca;
+    font-weight: 600;
+}
+
+.interview-submit-btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.iq-skip {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.45);
+    font-size: 0.8rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.25rem;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.iq-skip:hover {
+    color: rgba(255,255,255,0.7);
+}
+
+/* ══════════════════════════════
    FOOTER
 ══════════════════════════════ */
 footer {
