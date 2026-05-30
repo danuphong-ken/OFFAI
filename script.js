@@ -3,7 +3,7 @@ const ML_API_KEY  = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIj
 const ML_GROUP_ID = '187182560057492878';
 
 // ⚠️ วาง Web App URL จาก Apps Script ตรงนี้หลัง Deploy
-const INTERVIEW_URL = 'https://script.google.com/home/projects/1coAA_6uRC9ihX3cnTqN0NjOUWdLNTenc0Y4djGzAuf3Gx_IhbsQNoJUw/editRL';
+const INTERVIEW_URL = 'https://script.google.com/macros/s/AKfycbywo4zAwBZQG1OfwB5LpDOV5TCdaMDgglT7raEz8qrv81b5d5SD1-8ptSF3ssdtWb8T/exec';
 
 document.addEventListener('DOMContentLoaded', () => {
 
