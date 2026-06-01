@@ -196,49 +196,45 @@
                 </div>
             </div>
 
-            <!-- STEP 2: Interview Questions -->
+            <!-- STEP 2: Survey Questions -->
             <div id="step2" style="display:none;">
                 <div class="waitlist-badge">✅ อยู่ในลิสต์แล้ว!</div>
-                <h2 class="waitlist-title">ช่วยตอบ 5 คำถามได้ไหมครับ?</h2>
+                <h2 class="waitlist-title">ช่วยตอบ 6 ข้อได้ไหมครับ?</h2>
                 <p class="waitlist-subtitle">
-                    ใช้เวลาแค่ 2 นาที คำตอบของคุณจะช่วยให้ OFFAI<br>
-                    ตรงกับงานจริงๆ ของคุณมากขึ้นครับ
+                    แบบสำรวจก่อนนำ AI มาใช้ในองค์กร<br>
+                    ใช้เวลาแค่ 2 นาที ขอบคุณมากครับ 🙏
                 </p>
 
                 <form class="interview-form" id="interviewForm">
 
                     <div class="iq-group">
-                        <label class="iq-label">1. คุณทำงานตำแหน่งอะไร?</label>
-                        <input type="text" class="iq-input" id="iq_job" placeholder="เช่น HR Manager, Admin, Marketing" />
+                        <label class="iq-label">1. ตำแหน่งงานและแผนก</label>
+                        <textarea class="iq-textarea" id="iq_job" rows="2" placeholder="เช่น HR Manager ฝ่ายบุคคล, นักวิเคราะห์ฝ่าย IT..."></textarea>
                     </div>
 
                     <div class="iq-group">
-                        <label class="iq-label">2. งานที่เสียเวลามากที่สุดทุกวันคืออะไร?</label>
-                        <textarea class="iq-textarea" id="iq_pain" rows="2" placeholder="เล่าให้ฟังได้เลยครับ..."></textarea>
+                        <label class="iq-label">2. ปัจจุบันทำงานใช้โปรแกรมใดเป็นหลัก</label>
+                        <textarea class="iq-textarea" id="iq_programs" rows="2" placeholder="เช่น Microsoft Excel, Google Sheets, SAP, Notion..."></textarea>
                     </div>
 
                     <div class="iq-group">
-                        <label class="iq-label">3. ถ้า OFFAI ช่วยได้ อยากให้ทำอะไรมากที่สุด?</label>
-                        <textarea class="iq-textarea" id="iq_want" rows="2" placeholder="เช่น เขียน Email, สรุปประชุม, แนะนำ Tools..."></textarea>
+                        <label class="iq-label">3. คุณใช้ AI ช่วยในการทำงานหรือไม่ ใช้ทำงานประเภทอะไร</label>
+                        <textarea class="iq-textarea" id="iq_ai_use" rows="2" placeholder="เช่น ใช้ ChatGPT เขียน Email, ยังไม่ได้ใช้เลย..."></textarea>
                     </div>
 
                     <div class="iq-group">
-                        <label class="iq-label">4. เคยลอง AI Tools ในงานบ้างไหม?</label>
-                        <div class="iq-options" id="iq_ai">
-                            <button type="button" class="iq-opt" data-val="ใช้ทุกวัน">ใช้ทุกวัน</button>
-                            <button type="button" class="iq-opt" data-val="ลองบ้าง">ลองบ้าง</button>
-                            <button type="button" class="iq-opt" data-val="ยังไม่เคย">ยังไม่เคย</button>
-                        </div>
+                        <label class="iq-label">4. คุณอยากให้ AI ช่วยการทำงานด้านใด</label>
+                        <textarea class="iq-textarea" id="iq_want" rows="2" placeholder="เช่น สรุปรายงาน, วิเคราะห์ข้อมูล, เขียนเอกสาร..."></textarea>
                     </div>
 
                     <div class="iq-group">
-                        <label class="iq-label">5. ราคาที่รู้สึกคุ้มมากต่อเดือน?</label>
-                        <div class="iq-options" id="iq_price">
-                            <button type="button" class="iq-opt" data-val="ไม่เกิน 99 บาท">ไม่เกิน ฿99</button>
-                            <button type="button" class="iq-opt" data-val="100-299 บาท">฿100-299</button>
-                            <button type="button" class="iq-opt" data-val="300-599 บาท">฿300-599</button>
-                            <button type="button" class="iq-opt" data-val="600+ บาท">฿600+</button>
-                        </div>
+                        <label class="iq-label">5. คุณมีความกังวลเกี่ยวกับการใช้ AI หรือไม่?</label>
+                        <textarea class="iq-textarea" id="iq_concern" rows="2" placeholder="เช่น ความปลอดภัยของข้อมูล, ความถูกต้อง, ทักษะที่ต้องใช้..."></textarea>
+                    </div>
+
+                    <div class="iq-group">
+                        <label class="iq-label">6. คุณมีข้อเสนอแนะเกี่ยวกับการนำ AI มาใช้ในองค์กรอย่างไร?</label>
+                        <textarea class="iq-textarea" id="iq_suggest" rows="2" placeholder="แชร์ความคิดเห็นได้เลยครับ..."></textarea>
                     </div>
 
                     <button type="submit" class="waitlist-btn interview-submit-btn" id="interviewBtn">
