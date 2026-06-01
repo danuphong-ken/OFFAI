@@ -3,7 +3,7 @@ const ML_API_KEY  = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIj
 const ML_GROUP_ID = '187182560057492878';
 
 // ⚠️ วาง Web App URL จาก Apps Script ตรงนี้หลัง Deploy
-const INTERVIEW_URL = 'https://script.google.com/macros/s/AKfycbypKA3QKKHqU6IcyQfCZqgKRCK59ZZ8Id1iqMBFMd5h6Nh7CTCvXjQPLsA7r4iU-jK7/exec'
+const INTERVIEW_URL = 'https://script.google.com/macros/s/AKfycbz1y8OYrQQoaX6e5MOOuuF_U11I1MTyQZgs4PUNzK7nWmNyEi1PnHryfh_a-kWpPr5V/exec'
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -115,12 +115,13 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             const payload = {
-                email:           currentEmail,
-                job_title:       document.getElementById('iq_job').value.trim(),
-                pain_point:      document.getElementById('iq_pain').value.trim(),
-                want_from_offai: document.getElementById('iq_want').value.trim(),
-                ai_experience:   getSelected('iq_ai'),
-                price_point:     getSelected('iq_price')
+                email:     currentEmail,
+                job_title: document.getElementById('iq_job').value.trim(),
+                programs:  document.getElementById('iq_programs').value.trim(),
+                ai_use:    document.getElementById('iq_ai_use').value.trim(),
+                want:      document.getElementById('iq_want').value.trim(),
+                concern:   document.getElementById('iq_concern').value.trim(),
+                suggest:   document.getElementById('iq_suggest').value.trim()
             };
 
             interviewBtn.disabled = true;
